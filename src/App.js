@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Counter Exercise</h1>
+      <p>
+        The <code>&lt;Counter&gt;</code> below is not working yet.
+      </p>
+      <p>Can you make the number go up on every click?</p>
+      <p>
+        <span role="img" aria-label="Hint">
+          💡
+        </span>
+        &nbsp;Hint: you'll need to import something from React.
+      </p>
+      <p>
+        <strong>
+          <span role="img" aria-label="Bonus">
+            💯
+          </span>
+          &nbsp;Bonus
+        </strong>
+        : can you make two separate counters, one starting from 0 and another
+        from 5?
+      </p>
+      <Counter />
     </div>
   );
 }
 
-export default App;
+function Counter() {
+  return (
+    <div class="counter">
+      Current Value:<span>0</span>
+      <button>Increment</button>
+    </div>
+  );
+}
